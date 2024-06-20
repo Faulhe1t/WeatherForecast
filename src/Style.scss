@@ -1,0 +1,268 @@
+body {
+  background: linear-gradient(to right, #b6d8ee, #f1e8bc);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.searchArea {
+  margin-top: 15px;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  &__inputField {
+    outline: none;
+    padding: 10px;
+    font-family: FreeMono, monospace;
+    text-align: center;
+    font-size: calc(0.9em + 0.3vw);
+
+    @media all and (max-width: 2560px) {
+      width: 40%;
+    }
+    @media all and (max-width: 1024px) {
+      width: 55%;
+    }
+    @media all and (max-width: 480px) {
+      width: 60%;
+    }
+
+    color: black;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: calc(1em + 1vw);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 1);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.50);
+    }
+  }
+
+  &__searchButton {
+    padding: 10px;
+    display: flex;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 1);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.50);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &__searchIcon {
+      font-size: calc(1.5em + 0.3vw);
+    }
+  }
+}
+
+.inputAlert {
+  font-family: FreeMono, monospace;
+  text-align: center;
+  font-size: calc(0.9em + 0.3vw);
+  @media all and (max-width: 2560px)
+  {
+    padding: 350px;
+  }
+  @media all and (max-width: 1024px)
+  {
+    padding: 150px;
+  }
+  @media all and (max-width: 480px)
+  {
+    padding: 30px;
+  }
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: calc(1em + 1vw);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.mainWeatherCard {
+  align-items: center;
+  position: static;
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  font-family: FreeMono, monospace;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: calc(1.1em + 0.9vw);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 1);
+
+  &__temperature {
+    @media all and (max-width: 2560px) {
+      font-size: calc(0.6em + 1.0vw);
+    }
+    @media all and (max-width: 1920px) {
+      font-size: calc(0.8em + 1.0vw);
+    }
+    @media all and (max-width: 1024px) {
+      font-size: calc(1.2em + 0.8vw);
+    }
+    @media all and (max-width: 480px) {
+      font-size: calc(1.2em + 0.8vw);
+    }
+  }
+
+  &__weather {
+    @media all and (max-width: 2560px) {
+      font-size: calc(0.6em + 1.0vw);
+    }
+    @media all and (max-width: 1920px) {
+      font-size: calc(0.8em + 1.0vw);
+    }
+    @media all and (max-width: 1024px) {
+      font-size: calc(1.2em + 0.8vw);
+    }
+    @media all and (max-width: 480px) {
+      font-size: calc(1.2em + 0.8vw);
+    }
+  }
+
+  &__city {
+    @media all and (max-width: 2560px) {
+      font-size: calc(0.6em + 1.0vw);
+    }
+    @media all and (max-width: 1920px) {
+      font-size: calc(0.8em + 1.0vw);
+    }
+    @media all and (max-width: 1024px) {
+      font-size: calc(1.2em + 0.8vw);
+    }
+    @media all and (max-width: 480px) {
+      font-size: calc(1.2em + 0.8vw);
+    }
+    padding-top: 15px;
+
+  }
+
+  &__mainIcon {
+    @media all and (max-width: 2560px) {
+      font-size: 220px;
+    }
+    @media all and (max-width: 1920px) {
+      font-size: 200px;
+    }
+    @media all and (max-width: 1024px) {
+      font-size: 200px;
+    }
+    @media all and (max-width: 480px) {
+      font-size: 160px;
+    }
+  }
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  &__cardSliderButton {
+    all: unset;
+
+    font-size: calc(1.4em + 0.8vw);
+  }
+}
+
+.dayWeatherCard {
+  padding: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: calc(0.9em + 0.9vw);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 1);
+
+  font-family: FreeMono, monospace;
+
+  &__date {
+    @media all and (max-width: 2560px) {
+      font-size: calc(0.3em + 1.0vw);
+    }
+    @media all and (max-width: 1920px) {
+      font-size: calc(0.6em + 1.0vw);
+    }
+    @media all and (max-width: 1024px) {
+      font-size: calc(0.8em + 1.4vw);
+    }
+    @media all and (max-width: 480px) {
+      font-size: calc(0.9em + 1.4vw);
+    }
+  }
+
+  &__icon {
+    @media all and (max-width: 2560px) {
+      font-size: 160px;
+    }
+    @media all and (max-width: 1920px) {
+      font-size: 140px;
+    }
+    @media all and (max-width: 1024px) {
+      font-size: 140px;
+    }
+    @media all and (max-width: 480px) {
+      font-size: 80px;
+    }
+  }
+
+  &__temperature {
+    @media all and (max-width: 2560px) {
+      font-size: calc(0.3em + 1.0vw);
+    }
+    @media all and (max-width: 1920px) {
+      font-size: calc(0.6em + 1.0vw);
+    }
+    @media all and (max-width: 1024px) {
+      font-size: calc(0.8em + 1.4vw);
+    }
+    @media all and (max-width: 480px) {
+      font-size: calc(0.9em + 1.4vw);
+    }
+  }
+
+  &__weather {
+    margin-top: 0.6vw;
+    @media all and (max-width: 2560px) {
+      font-size: calc(0.3em + 1.0vw);
+    }
+    @media all and (max-width: 1920px) {
+      font-size: calc(0.6em + 1.0vw);
+    }
+    @media all and (max-width: 1024px) {
+      font-size: calc(0.8em + 1.4vw);
+    }
+    @media all and (max-width: 480px) {
+      font-size: calc(0.9em + 1.4vw);
+    }
+  }
+}

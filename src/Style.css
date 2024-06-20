@@ -1,0 +1,302 @@
+body {
+  background: linear-gradient(to right, #b6d8ee, #f1e8bc);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.searchArea {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.searchArea__inputField {
+  outline: none;
+  padding: 10px;
+  font-family: FreeMono, monospace;
+  text-align: center;
+  font-size: calc(0.9em + 0.3vw);
+  color: black;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: calc(1em + 1vw);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgb(255, 255, 255);
+}
+@media all and (max-width: 2560px) {
+  .searchArea__inputField {
+    width: 40%;
+  }
+}
+@media all and (max-width: 1024px) {
+  .searchArea__inputField {
+    width: 55%;
+  }
+}
+@media all and (max-width: 480px) {
+  .searchArea__inputField {
+    width: 60%;
+  }
+}
+.searchArea__inputField:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.searchArea__searchButton {
+  padding: 10px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgb(255, 255, 255);
+}
+.searchArea__searchButton:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.searchArea__searchButton:focus {
+  outline: none;
+}
+.searchArea__searchButton__searchIcon {
+  font-size: calc(1.5em + 0.3vw);
+}
+
+.inputAlert {
+  font-family: FreeMono, monospace;
+  text-align: center;
+  font-size: calc(0.9em + 0.3vw);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: calc(1em + 1vw);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgb(255, 255, 255);
+}
+@media all and (max-width: 2560px) {
+  .inputAlert {
+    padding: 350px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .inputAlert {
+    padding: 150px;
+  }
+}
+@media all and (max-width: 480px) {
+  .inputAlert {
+    padding: 30px;
+  }
+}
+
+.mainWeatherCard {
+  align-items: center;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: FreeMono, monospace;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: calc(1.1em + 0.9vw);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgb(255, 255, 255);
+}
+@media all and (max-width: 2560px) {
+  .mainWeatherCard__temperature {
+    font-size: calc(0.6em + 1vw);
+  }
+}
+@media all and (max-width: 1920px) {
+  .mainWeatherCard__temperature {
+    font-size: calc(0.8em + 1vw);
+  }
+}
+@media all and (max-width: 1024px) {
+  .mainWeatherCard__temperature {
+    font-size: calc(1.2em + 0.8vw);
+  }
+}
+@media all and (max-width: 480px) {
+  .mainWeatherCard__temperature {
+    font-size: calc(1.2em + 0.8vw);
+  }
+}
+@media all and (max-width: 2560px) {
+  .mainWeatherCard__weather {
+    font-size: calc(0.6em + 1vw);
+  }
+}
+@media all and (max-width: 1920px) {
+  .mainWeatherCard__weather {
+    font-size: calc(0.8em + 1vw);
+  }
+}
+@media all and (max-width: 1024px) {
+  .mainWeatherCard__weather {
+    font-size: calc(1.2em + 0.8vw);
+  }
+}
+@media all and (max-width: 480px) {
+  .mainWeatherCard__weather {
+    font-size: calc(1.2em + 0.8vw);
+  }
+}
+.mainWeatherCard__city {
+  padding-top: 15px;
+}
+@media all and (max-width: 2560px) {
+  .mainWeatherCard__city {
+    font-size: calc(0.6em + 1vw);
+  }
+}
+@media all and (max-width: 1920px) {
+  .mainWeatherCard__city {
+    font-size: calc(0.8em + 1vw);
+  }
+}
+@media all and (max-width: 1024px) {
+  .mainWeatherCard__city {
+    font-size: calc(1.2em + 0.8vw);
+  }
+}
+@media all and (max-width: 480px) {
+  .mainWeatherCard__city {
+    font-size: calc(1.2em + 0.8vw);
+  }
+}
+@media all and (max-width: 2560px) {
+  .mainWeatherCard__mainIcon {
+    font-size: 220px;
+  }
+}
+@media all and (max-width: 1920px) {
+  .mainWeatherCard__mainIcon {
+    font-size: 200px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .mainWeatherCard__mainIcon {
+    font-size: 200px;
+  }
+}
+@media all and (max-width: 480px) {
+  .mainWeatherCard__mainIcon {
+    font-size: 160px;
+  }
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.slider__cardSliderButton {
+  all: unset;
+  font-size: calc(1.4em + 0.8vw);
+}
+
+.dayWeatherCard {
+  padding: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: calc(0.9em + 0.9vw);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgb(255, 255, 255);
+  font-family: FreeMono, monospace;
+}
+@media all and (max-width: 2560px) {
+  .dayWeatherCard__date {
+    font-size: calc(0.3em + 1vw);
+  }
+}
+@media all and (max-width: 1920px) {
+  .dayWeatherCard__date {
+    font-size: calc(0.6em + 1vw);
+  }
+}
+@media all and (max-width: 1024px) {
+  .dayWeatherCard__date {
+    font-size: calc(0.8em + 1.4vw);
+  }
+}
+@media all and (max-width: 480px) {
+  .dayWeatherCard__date {
+    font-size: calc(0.9em + 1.4vw);
+  }
+}
+@media all and (max-width: 2560px) {
+  .dayWeatherCard__icon {
+    font-size: 160px;
+  }
+}
+@media all and (max-width: 1920px) {
+  .dayWeatherCard__icon {
+    font-size: 140px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .dayWeatherCard__icon {
+    font-size: 140px;
+  }
+}
+@media all and (max-width: 480px) {
+  .dayWeatherCard__icon {
+    font-size: 80px;
+  }
+}
+@media all and (max-width: 2560px) {
+  .dayWeatherCard__temperature {
+    font-size: calc(0.3em + 1vw);
+  }
+}
+@media all and (max-width: 1920px) {
+  .dayWeatherCard__temperature {
+    font-size: calc(0.6em + 1vw);
+  }
+}
+@media all and (max-width: 1024px) {
+  .dayWeatherCard__temperature {
+    font-size: calc(0.8em + 1.4vw);
+  }
+}
+@media all and (max-width: 480px) {
+  .dayWeatherCard__temperature {
+    font-size: calc(0.9em + 1.4vw);
+  }
+}
+.dayWeatherCard__weather {
+  margin-top: 0.6vw;
+}
+@media all and (max-width: 2560px) {
+  .dayWeatherCard__weather {
+    font-size: calc(0.3em + 1vw);
+  }
+}
+@media all and (max-width: 1920px) {
+  .dayWeatherCard__weather {
+    font-size: calc(0.6em + 1vw);
+  }
+}
+@media all and (max-width: 1024px) {
+  .dayWeatherCard__weather {
+    font-size: calc(0.8em + 1.4vw);
+  }
+}
+@media all and (max-width: 480px) {
+  .dayWeatherCard__weather {
+    font-size: calc(0.9em + 1.4vw);
+  }
+}
+
+/*# sourceMappingURL=Style.css.map */
